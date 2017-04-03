@@ -1,0 +1,122 @@
+body {
+    padding-top: 8%;
+}
+h1{
+    font-size: 2em;
+}
+h2 {
+    font-size: 25px;
+    color: lemonchiffon;
+    background-color: black;
+    padding: 5px 0 5px 5px;
+    
+}
+h3 {
+    font-size: 1.5em;
+    margin-left: 1.5em;
+    
+}
+
+div.container {
+    background-color: white;
+    padding: 20px;
+    color: black;
+}
+input.form-control:focus, textarea:focus {
+    background-color: lightgoldenrodyellow;
+    border-spacing: 5px; 
+}
+
+ul.dropdown-menu li {
+    text-align: center;
+}
+select {
+    color: black;
+}
+input#submitinfo,
+input#submitorder,
+input#submitbillinginfo,
+input#submitpayment
+ {
+    color: yellow;
+    background-color: black; 
+    margin-top: 20px;
+}
+input.radio {
+    display: inline;
+    margin-left: 20px;
+}
+label {
+    margin-top: 30px;
+    font-size: 15px;
+    color: black;
+}
+input.info {
+    margin: 0px 0 10px 0;
+}
+hr {
+    margin: 40px 0;
+}
+div#pizza1,
+div#pizza2,
+div#pizza3,
+div#pizza4 {
+    display: none;
+}
+.header {
+    height: 100px;
+}
+nav.navbar2 {
+    min-height: 4em;
+    background-color: black;
+    padding-top: 1em;
+    padding-right: .5em;
+}
+#pizzaTotal {
+    font-size: 1.5em;
+    color: yellow;
+    padding-left: 5px;
+    padding-right: 45px;
+    padding-bottom: 10px;
+    background-color: black;
+}
+#stickynav { 
+    position:fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+div#checktoppings {
+    margin-left: 20px;
+}
+div#inputaddress {
+    display: none;
+}
+p#expiration {
+    margin: 0;
+}
+select#year {
+    margin: 0 0 20px 20px;
+}
+li {list-style-type: none;   
+}   
+input:focus, textarea:focus{  
+background-color: yellow;  
+} 
+@media screen and (min-width:1292px){
+    body{
+        padding-top: 2%;
+    }    
+}
+@media screen and (max-width:320px){
+    body{
+        padding-top: 15%;
+    }
+    .lead {
+	display: none;
+}    
+}
+
+
+

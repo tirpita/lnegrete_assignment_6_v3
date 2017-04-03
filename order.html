@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+<title>PIZZA PARTY ORDER FORM</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- Custom styles for this template --> 
+<link href="jumbotron-narrow.css" rel="stylesheet"> 
+<link href="order.css" rel="stylesheet">
+</head>
+    
+<body>
+<div id="stickynav">       
+  <div class="container">  
+    <nav class="navbar2">
+        <ul class="nav nav-fixed-top pull-right">
+        <li id="pizzaTotal"></li>
+        </ul>
+    </nav>       
+  </div> 
+</div>
+<div class="container">
+<section>
+<div class="jumbotron">
+<h1>Pizza Party</h1>
+<p class="lead">Get the party started! </p>
+<p><a class="btn btn-lg btn-primary" href="index.html" role="button">Home</a></p> 
+</div>
+<form id="infoform" method="get" onsubmit="return false">
+<fieldset>
+<div id="customerinfo">
+<h2>Delivery Address</h2>
+<input id="yourname" type="text" class="form-control" placeholder="Your Full Name" aria-describedby="basic-addon1">
+<br>
+<input id="address" type="text" class="form-control info" placeholder="Street Address" aria-describedby="basic-addon1">
+<input id="aptnumber" type="text" class="form-control info" placeholder="Apartment, Suite, or Room Number (optional)" aria-describedby="basic-addon1">
+<input id="city" type="text" class="form-control info" placeholder="City" aria-describedby="basic-addon1">
+<input id="state" type="text" class="form-control info" placeholder="State" aria-describedby="basic-addon1">
+<input id="zipcode" type="text" class="form-control info" placeholder="Zip Code" aria-describedby="basic-addon1">
+<input id="phonenumber" type="text" class="form-control info" placeholder="Phone Number" aria-describedby="basic-addon1">
+<input id="email" type="text" class="form-control info" placeholder="E-mail Address" aria-describedby="basic-addon1">
+                        
+<label>Address Type:</label> <br>
+<select id="addresstype" name="addresstype">
+<option value="house">House</option>
+<option value="apartment">Apartment</option>
+<option value="business">Business</option>
+<option value="campus">Campus</option>
+<option value="hotel">Hotel</option>
+<option value="other">Other</option>
+</select>
+<div id="inputaddress">
+<br>
+<input type="text" class="form-control info" placeholder="Enter Address Type">
+</div>
+<br>
+<input id="submitinfo" type="submit" value="SUBMIT DELIVERY INFORMATION">
+</div>
+</fieldset>
+</form>
+<form id="pizzaform" method="">
+ <fieldset>
+<h2>Order Selections </h2>
+<div id="crust">
+<label>Choose your crust:</label>
+<br>
+<input id="tossed" class="radio" type="radio" name="selectedcrust" value="tossed"> Hand Tossed
+ <br>
+<input id="thin" class="radio" type="radio" name="selectedcrust" value="thin"> Thin Crust
+<br>
+<input id="newyork" class="radio" type="radio" name="selectedcrust" value="newyork"> New York Style
+<br>
+<input id="glutenfree" class="radio" type="radio" name="selectedcrust" value="glutenfree"> Gluten Free
+</div>
+<div id="pizza1">
+<label>Hand Tossed - size options:</label>
+<br>
+<select id="handtossed" name="handtossed">
+<option value="small-tossed" selected>Small ($9.99)</option>
+<option value="medium-tossed">Medium ($12.99)</option>
+<option value="large-tossed">Large ($14.99)</option>
+</select>
+</div>
+<div id="pizza2">
+<label>Thin Crust - size options</label>
+<br>
+<select id="thintossed" name="thin">
+<option value="medium-thin">Medium ($11.99)</option>
+<option value="large-thin">Large ($13.99)</option>
+</select>
+</div>
+<div id="pizza3">
+<label>New York - size options:</label>
+<br>
+<select id="newyorktossed" name="newyork">
+<option value="ny-large">Large ($16.99)</option>
+<option value="ny-xlarge">Extra Large ($19.99)</option>
+</select>
+</div>
+<div id="pizza4">
+<label>Glutin Free - one size:</label>
+<br>
+<select id="glutenfreetossed" name="glutenfree">
+<option value="small" selected>Small ($10.99)</option>
+</select>
+</div>
+<label>Cheese Preference:</label>
+<br>
+<select id="cheesetype" name="cheesetype">
+<option value="light">Light: no charge</option>
+<option value="normal" selected>Normal: no charge</option>
+<option value="extra">Extra: ($2.99)</option>
+<option value="double">Double: ($3.99)</option>
+</select>
+<br>
+<label>Select Sauce:</label>
+<br>
+<select id="saucetype" name="saucetype">
+<option value="regular" selected>Regular Tomato: no charge</option>
+<option value="hearty">Hearty Tomato: ($.99)</option>
+<option value="bbq">BBQ Sauce: ($1.99)</option>
+</select>
+<br>
+<label>Toppings: $0.99 extra per topping</label>
+<br>
+</fieldset>
+</form>
+<div id="checktoppings">
+<input type="checkbox" name="toppings" onclick="calculate()"> Pepperoni
+<br>
+<input type="checkbox" name="toppings" onclick="calculate()"> Sausage
+<br>
+<input type="checkbox" name="toppings" onclick="calculate()"> Ham
+ <br>
+<input type="checkbox" name="toppings" onclick="calculate()"> Bacon
+ <br>
+<input type="checkbox" name="toppings" value="0.99"> Salami
+<br>
+<input type="checkbox" name="toppings" value="0.99"> Peppers
+ <br>
+<input type="checkbox" name="toppings" value="0.99"> Olives
+ <br>
+<input type="checkbox" name="toppings" value="0.99"> Jalepenos
+<br>
+<input type="checkbox" name="toppings" value="0.99"> Mushrooms
+<br>
+<input type="checkbox" name="toppings" value="0.99"> Pineapple
+<br>
+<input type="checkbox" name="toppings" value="0.99"> Onions </div>
+<input id="submitorder" type="submit" value="SUBMIT ORDER">
+<form id="infoform2" method="get" onsubmit="return false">
+<fieldset>
+<div id="billinginfo">
+<h2>Billing Address:</h2>
+<input id="billingname" type="text" class="form-control" placeholder="Name on Card" aria-describedby="basic-addon1">
+<br>
+<input id="billingaddress" type="text" class="form-control info" placeholder="Street Address" aria-describedby="basic-addon1">
+<input id="billingaptnumber" type="text" class="form-control info" placeholder="Apartment, Suite, or Room Number (optional)" aria-describedby="basic-addon1">
+<input id="billingcity" type="text" class="form-control info" placeholder="City" aria-describedby="basic-addon1">
+<input id="billingstate" type="text" class="form-control info" placeholder="State" aria-describedby="basic-addon1">
+<input id="billingzipcode" type="text" class="form-control info" placeholder="Zip Code" aria-describedby="basic-addon1">
+<input id="billingphone" type="text" class="form-control info" placeholder="Phone Number" aria-describedby="basic-addon1">
+<input id="billingemail" type="text" class="form-control info" placeholder="E-mail Address" aria-describedby="basic-addon1">
+<input id="billingchk" type="checkbox"> Same as delivery address<br>
+<input id="submitbillinginfo" type="submit" value="SUBMIT BILLING INFO"><br>
+<label>Credit Card Information:</label>
+<input id="creditcard" type="text" class="form-control info" placeholder="Enter Credit Card Number" aria-describedby="basic-addon1">
+<input id="cvc" type="text" class="form-control info" placeholder="Enter CVC" aria-describedby="basic-addon1">
+<br>
+<p id="expiration">Expiration Date:</p>
+ <br>
+<select id="month" name="month">
+<option value="default" selected>Month</option>
+<option value="January">01</option>
+<option value="February">02</option>
+<option value="March">03</option>
+<option value="April">04</option>
+<option value="May">05</option>
+<option value="June">06</option>
+<option value="July">07</option>
+<option value="August">08</option>
+<option value="September">09</option>
+<option value="October">10</option>
+<option value="November">11</option>
+<option value="December">12</option>
+</select>
+<select id="year" name="year">
+<option value="default" selected>Year</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
+<option value="2023">2023</option>
+<option value="2024">2024</option>
+<option value="2025">2025</option>
+<option value="2026">2026</option>
+</select>
+<br>
+<input id="submitpayment" type="submit" value="SUBMIT PAYMENT">
+</div>
+</fieldset>
+</form>
+</section>
+<br>
+<footer class="footer">
+<p>&copy; 2017 Pizza Party</p>
+</footer>
+</div>
+<script src="order.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>
